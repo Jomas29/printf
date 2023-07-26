@@ -8,5 +8,5 @@
  * Return: The number of characters printed.
  */
 int _printf(const char *format, ...);
-int print_string(char *str);
+
 #endif/* MAIN_H */

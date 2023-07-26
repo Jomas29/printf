@@ -26,7 +26,18 @@ int _printf(const char *format, ...)
 				count += putchar(va_arg(ap, int));
 				break;
 				case 's':
-				count += print_string(va_arg(ap, char *));
+				{
+					char *str = va_arg(ap, char *);
+					if (str != NULL)
+					{
+						while (*str)
+						{
+					putchar(*str);
+					str++;
+					count++;
+						}
+					}
+				}
 				break;
 				case '%':
 				putchar('%');
